@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+
+.nav_link {
+  @apply ml-4 border-b-2 border-white py-2 h-full flex items-center;
+  a {
+    @apply py-5 px-5;
+  }
+  &:hover {
+    @apply transition-colors duration-150 ease-in border-blue-800 bg-blue-100;
+  }
+}
+
+.btn {
+  @apply text-center rounded-sm py-5 font-bold text-lg w-full;
+  &.btn--small {
+    @apply py-3 rounded-lg;
+  }
+}
+
+.btn-link {
+  @apply text-center rounded-sm py-5 font-bold text-lg w-full py-3 rounded-lg bg-red-500 border-2 border-red-500 text-red-100;
+  &:hover {
+    @apply bg-white text-red-700;
+  }
+}
+
+.movie {
+  @apply bg-white;
+  background: rgba($color: #ffffff, $alpha: 1);
+  transition: background 2s ease-out;
+  position: relative;
+  &:hover {
+    background: linear-gradient(271deg, #e8f8ff, #e8f8ff 20%, #ffffff);
+  }
+}
+
+input,
+textarea,
+select {
+  @apply mt-2 text-center rounded-md py-5 font-bold text-lg w-full text-left border border-gray-600 px-5;
+  &:focus {
+    @apply outline-none border-teal-300;
+  }
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+select {
+  height: 30px;
+}
+
+@tailwind utilities;
